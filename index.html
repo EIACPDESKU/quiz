@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>Responsive Webview + Scrollable Sidebar</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div class="app">
+<header class="topbar">
+<button class="menu-toggle" aria-label="Open sidebar">☰</button>
+<h1 class="title">Info Viewer</h1>
+</header>
+
+
+<aside class="sidebar" id="sidebar" aria-label="Sidebar navigation">
+<div class="sidebar-inner">
+<h2 class="sidebar-title">Pages</h2>
+<div class="btns" role="list" id="pageList">
+<!-- Buttons will also work if JS disabled thanks to plain <a> fallback -->
+<button data-page="quiz_pollution.html" class="page-btn active" role="listitem">Quiz on pollution in India</button>
+<button data-page="quiz_wetland.html" class="page-btn" role="listitem">Quiz on wetlands of India</button>
+</div>
+
+
+<div class="sidebar-footer">
+<small>Tip: Use the menu on small screens.</small>
+</div>
+</div>
+</aside>
+
+
+<main class="webview-container">
+<!-- The webview: iframe showing local HTML pages -->
+<iframe id="webview" src="quiz_pollution.html" title="Webview area"></iframe>
+</main>
+</div>
+
+
+<script src="script.js"></script>
+</body>
+</html>
